@@ -68,7 +68,7 @@ function CookBook() {
             <h2>{recipe.title}</h2>
             <br />
             <p id="prep">{recipe.ingredients}</p>
-            <p id="prep">{recipe.instructions}</p>
+            <p >{recipe.instructions}</p>
             <p>{recipe.date}</p>
             <button
               onClick={() => {

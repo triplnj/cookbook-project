@@ -84,7 +84,7 @@ function Recipes() {
                   </ul>
                 </Head>
 
-                <h3>preparation</h3>
+                <h3 style={{textAlign:"left"}}>preparation</h3>
                 {data.instructions.map((instruction, index) => (
                   <H4 key={index}>{instruction.text}</H4>
                 ))}
