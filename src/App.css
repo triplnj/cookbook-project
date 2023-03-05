@@ -1,0 +1,22 @@
+ body{
+  background-color: #A75D5D;
+  color: #FFC3A1;
+}
+
+img{
+
+  width: 400px;
+  height: 400px;
+  border: 3px solid purple;
+  border-radius:50%;
+}
+li{
+
+  width: 400px;
+  
+}   
+ h2{font-size: 3rem; text-align: center;}
+h3{
+  text-align: center;
+  font-size: 2rem;
+} 
