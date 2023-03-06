@@ -40,32 +40,38 @@ const Head = styled.div`
 function Recipes() {
   const [recipes, setRecipes] = useState([]);
 
-  const newRecipes = async () => {
-    const options = {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": "3dbc527ed9msh7f8e4e06afe15a0p124cb2jsn79052db837f2",
-        "X-RapidAPI-Host": "random-recipes.p.rapidapi.com",
-      },
-    };
-    try {
-      const response = await fetch(
-        `https://random-recipes.p.rapidapi.com/ai-quotes/4`,
-        options
-      );
-      const data = await response.json();
-      setRecipes(data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  
   useEffect(() => {
+    const newRecipes = async () => {
+      const options = {
+        method: "GET",
+        headers: {
+          "X-RapidAPI-Key": "3dbc527ed9msh7f8e4e06afe15a0p124cb2jsn79052db837f2",
+          "X-RapidAPI-Host": "random-recipes.p.rapidapi.com",
+        },
+      };
+      try {
+        const response = await fetch(
+          `https://random-recipes.p.rapidapi.com/ai-quotes/1`,
+          options
+        );
+        const data = await response.json();
+        setRecipes(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
     newRecipes();
+
   }, []);
+
+  
 
   return (
     <>
+   
       <Rec>
+   
         {recipes && recipes.length > 0 ? (
           <Unit>
             {recipes.map((data) => (

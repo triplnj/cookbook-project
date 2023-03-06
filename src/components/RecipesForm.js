@@ -79,6 +79,10 @@ function RecipesForm() {
     navigate("/notes");
   };
 
+  function refreshPage(){
+    window.location.reload(false)
+  }
+
   return (
     <>
       <h1>Recipes</h1>
@@ -115,7 +119,9 @@ function RecipesForm() {
             />
           </label>
           <Button type="submit">Add Recipe</Button>
+        
         </Form>
+        <Button onClick={refreshPage}>Find another recipe...</Button>
       </div>
       <Recipes />
     </>

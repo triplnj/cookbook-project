@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { RecipesContextProvider } from "./contexts/RecipesContextProvider";
 import RecipesForm from "./components/RecipesForm";
+
 import CookBook from "./components/CookBook";
 import styled from "styled-components";
 import "./App.css";
@@ -25,6 +26,7 @@ function App() {
             <Route path="/notes" element={<CookBook />} />
           </Routes>
         </Router>
+     
       </RecipesContextProvider>
     </Cont>
   );
